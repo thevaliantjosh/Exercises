@@ -48,3 +48,61 @@ actualMinutesInOven(numberOfLayers);
 // function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
 //
 // }
+
+function give(input) {
+    return input;
+}
+
+let apple = give("apple");
+let banana = give("banana");
+let orange = give("orange");
+
+function giveFruit() {
+    return `Here is an ${apple}, a ${banana}, and an ${orange}`
+}
+
+console.log(giveFruit());
+
+function moreFruit() {
+    return `Here is some more fruit: ${give("pineapple")}, ${give("mango")}, and a ${give("kiwi")}`;
+}
+
+console.log(moreFruit());
+
+
+// Loop through the array and verify which digit is a repDigit(i.e. 22, 33)
+let someDigits = [11, 33, 22, 42, 23, 41, 44];
+
+// function repDigit(array) {
+//     let numberToString = array.toString();
+//     for(let i = 0; i < array.length; i++) {
+//         numberToString = array[i];
+//         //console.log(numberToString);
+//         if(numberToString[i] === numberToString.charAt(numberToString[i])) {
+//             return `${numberToString[i]} is a repDigit!`
+//         }
+//         else {
+//             return `This digit: ${numberToString[i]} is not!`
+//         }
+//     }
+// }
+//
+// console.log(repDigit(someDigits));
+
+//Arrays
+
+let languages = ["C", "C++", "Java"];
+let primes = [2, 3, 5, 7, 11];
+let emptyArray = [];
+let a = "Douglas";
+let b = 12;
+let c = true;
+let someValues = [ a, b, c ];
+
+console.log(someValues);
+
+function toArray(input1, input2) {
+    return [input1, input2];
+}
+
+console.log(toArray("Argument #1", "Argument #2"));
