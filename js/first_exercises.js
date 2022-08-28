@@ -164,3 +164,7 @@ function getLastElement(array) {
 }
 
 console.log(getLastElement(oblivionWeapons));
+oblivionWeapons.reverse();
+console.log(oblivionWeapons);
+oblivionWeapons.sort();
+console.log(oblivionWeapons);
