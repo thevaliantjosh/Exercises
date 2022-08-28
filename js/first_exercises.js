@@ -141,7 +141,26 @@ function setFirstElement(array, d) {
         return array;
 }
 
-console.log(setFirstElement(["Hello", "World"], "Wussup,"));
-console.log(setFirstElement([], 1));
-console.log(setFirstElement([1, 2], 3))
-console.log(setFirstElement([1, 2, 3], 4));
+// console.log(setFirstElement(["Hello", "World"], "Wussup,"));
+// console.log(setFirstElement([], 1));
+// console.log(setFirstElement([1, 2], 3))
+// console.log(setFirstElement([1, 2, 3], 4));
+
+let oblivionWeapons = [];
+let lengthOfOblivionWeapons = oblivionWeapons.length;
+console.log(`Length of Array oblivionWeapons is Now: ${lengthOfOblivionWeapons}`);
+oblivionWeapons[0] = "Iron Sword";
+lengthOfOblivionWeapons = oblivionWeapons.length;
+console.log(`Length of Array oblivionWeapons is Now: ${lengthOfOblivionWeapons}`);
+oblivionWeapons[1] = "Steel Mace";
+lengthOfOblivionWeapons = oblivionWeapons.length;
+console.log(`Length of Array oblivionWeapons is Now: ${lengthOfOblivionWeapons}`);
+oblivionWeapons.push("Steel Sword", "The Sword of Woe", "The Dagger of Doom");
+lengthOfOblivionWeapons = oblivionWeapons.length;
+console.log(`Length of Array oblivionWeapons is Now: ${lengthOfOblivionWeapons}`);
+
+function getLastElement(array) {
+    return array[array.length -1];
+}
+
+console.log(getLastElement(oblivionWeapons));
