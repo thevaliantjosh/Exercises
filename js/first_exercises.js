@@ -106,3 +106,44 @@ function toArray(input1, input2) {
 }
 
 console.log(toArray("Argument #1", "Argument #2"));
+
+c = languages[0];
+let cPlusPlus = languages[1]
+console.log(cPlusPlus);
+let java = languages[2];
+console.log(java);
+console.log(languages);
+
+function getFirstElement(array) {
+    return array[0];
+}
+
+console.log(getFirstElement(languages));
+
+//You add elements into an array by index.
+
+let pokemon = [];
+pokemon[0] = "Pikachu";
+pokemon[5] = "Charmander";
+pokemon[1] = "Bulbasaur";
+pokemon[2] = "Squirtle";
+pokemon[3] = "Zapidos";
+pokemon[4] = "Gyarados";
+console.log(pokemon)
+
+//Function that will take an array and a variable, and returns the variable as the first element in the array, and the array returned.
+
+function setFirstElement([a, b], c) {
+    if(tyepof [a] === undefined) {
+        return [];
+    } else {
+        let newArray = [a, b];
+        newArray.shift();
+        newArray[0] = c;
+        newArray = [c, b];
+        return newArray;
+    }
+}
+
+console.log(setFirstElement(["Hello", "World"], "Wussup,"));
+console.log(setFirstElement([], 1));
