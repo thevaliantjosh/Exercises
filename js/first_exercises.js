@@ -168,3 +168,15 @@ oblivionWeapons.reverse();
 console.log(oblivionWeapons);
 oblivionWeapons.sort();
 console.log(oblivionWeapons);
+let firstOblivionWeapons = oblivionWeapons.shift();
+console.log(oblivionWeapons);
+console.log(firstOblivionWeapons);
+oblivionWeapons.push(firstOblivionWeapons);
+console.log(oblivionWeapons);
+
+function ifYouAintFirstYourLast(array) {
+    let first = array.shift();
+    array.push(first);
+    return array;
+}
+console.log(ifYouAintFirstYourLast(oblivionWeapons));
