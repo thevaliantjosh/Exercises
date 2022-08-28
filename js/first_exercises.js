@@ -133,17 +133,15 @@ console.log(pokemon)
 
 //Function that will take an array and a variable, and returns the variable as the first element in the array, and the array returned.
 
-function setFirstElement([a, b], c) {
-    if(tyepof [a] === undefined) {
-        return [];
-    } else {
-        let newArray = [a, b];
-        newArray.shift();
-        newArray[0] = c;
-        newArray = [c, b];
-        return newArray;
-    }
+
+
+function setFirstElement(array, d) {
+    array.shift();
+    array.unshift(d);
+        return array;
 }
 
 console.log(setFirstElement(["Hello", "World"], "Wussup,"));
 console.log(setFirstElement([], 1));
+console.log(setFirstElement([1, 2], 3))
+console.log(setFirstElement([1, 2, 3], 4));
