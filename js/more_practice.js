@@ -38,9 +38,29 @@ let fruitsAndVeggies = fruits.concat(vegetables);
 fruitsAndVeggies.sort();
 console.log(fruitsAndVeggies);
 
+//Generate a random number that is Positive and even
 
+function randomNumber() {
+    return Math.ceil(Math.random() * 100) + 1;
+}
 
+function randomEvenNumber() {
+    let randomNumber = Math.ceil(Math.random() * 100) + 10;
+    if(randomNumber % 2 !==0) {
+        return randomEvenNumber();
+    }
+    return randomNumber;
+}
 
+//Generate a random number that is both positive and odd
+
+function randomOddNumber() {
+    let randomNumber = Math.ceil(Math.random() * 100) + 10;
+    if (randomNumber % 2 === 0) {
+        return randomOddNumber();
+    }
+    return randomNumber;
+}
 
 
 
