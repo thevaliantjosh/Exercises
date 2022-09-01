@@ -62,6 +62,81 @@ function randomOddNumber() {
     return randomNumber;
 }
 
+//Function that will say Hello to any name
 
+function sayHello(name) {
+    return `Hello, ${name}!`;
+}
+//console.log(sayHello("Joshua"));
 
+//Function that will add 2 to any number
+
+function addTwo(x) {
+    if (!isNumber(x)) {
+        return "Please Enter a Number.";
+    }
+    return x + 2;
+}
+
+//Function That will add 1 to any number
+
+function addOne(number) {
+    if (!isNumber(number)) {
+        return "Please Enter a Number.";
+    }
+    return number + 1;
+}
+
+//Write a Function that return True if a number is Positive
+
+function isPositive(number) {
+    if (!isNumber(number)) {
+        return "Please Enter a Number."
+    }
+    return number > 0;
+}
+
+//Write a Function that return True if a number is Negative
+
+function isNegative(number) {
+    if (!isNumber(number)) {
+        return "Please Enter a Number.";
+    }
+    return number < 0;
+}
+
+//Function that returns true if a number is odd
+
+function isOdd(number) {
+    if (!isNumber(number)) {
+        return "Please Enter a Number.";
+    }
+    return number % 2 !== 0;
+}
+
+/* Given a number Return a String Array as the answer
+* If the number is divisible by 3 return "Fizz"
+* If the number is divisible by 5 return "Buzz"
+* If the number is divisible by both 3 and 5 Return "FizzBuzz"
+* if the number is neither divisible by 3 or 5 return the number as a "String"
+* */
+
+function fizzBuzz(number) {
+    let bucket = [];
+    for (let i = 0; i <= number; i++) {
+        if([i] % 3 === 0) {
+            bucket.push("Fizz")
+        } else if ([i] % 5 === 0) {
+            bucket.push("Buzz")
+        } else if ([i] % 3 === 0 && [i] % 5 === 0 ) {
+            bucket.push("FizzBuzz!")
+        } else {
+            bucket.push(i).toString();
+        }
+
+    }
+    return bucket;
+}
+
+console.log(fizzBuzz(15));
 
