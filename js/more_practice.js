@@ -123,15 +123,15 @@ function isOdd(number) {
 
 function fizzBuzz(number) {
     let bucket = [];
-    for (let i = 0; i <= number; i++) {
-        if([i] % 3 === 0) {
-            bucket.push("Fizz")
+    for (let i = 1; i <= number; i++) {
+        if([i] % 3 === 0 && [i] % 5 === 0 ) {
+            bucket.push("FizzBuzz!")
         } else if ([i] % 5 === 0) {
             bucket.push("Buzz")
-        } else if ([i] % 3 === 0 && [i] % 5 === 0 ) {
-            bucket.push("FizzBuzz!")
+        } else if ([i] % 3 === 0) {
+                bucket.push("Fizz")
         } else {
-            bucket.push(i).toString();
+            bucket.push(i.toString());
         }
 
     }
@@ -139,4 +139,5 @@ function fizzBuzz(number) {
 }
 
 console.log(fizzBuzz(15));
+
 
