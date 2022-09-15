@@ -140,4 +140,96 @@ function fizzBuzz(number) {
 
 console.log(fizzBuzz(15));
 
+/*"ubuntu" returns "t"
+* [1, 2, 3, 4] returns 3
+* ["JS", "is", "awesome"] returns "is"
+* ["kiwi", "mango", "guava"] returns "mango"
+*Find the second to last with a simple string first.
+*
+*
+* */
 
+/*Return empty string if it is an empty string
+* Return empty array if it is an empty array
+* */
+
+function last(sequence) {
+    if(sequence.trim() === "" || sequence === "") {
+        return `You have an empty string!: ""${sequence.trim()}`;
+    } else if (sequence === []) {
+        return `You have an empty array!: ${sequence}`
+    } else {
+        return sequence[sequence.length-1]
+    }
+}
+
+
+
+function secondToLast(sequence) {
+    return sequence[sequence.length - 2];
+}
+
+/*console.log(secondToLast("ubuntu"));
+// console.log(secondToLast([1, 2, 3, 4]));
+// console.log(secondToLast(["JS", "is", "awesome"]));
+
+/*Write a function isPalindrome that will return True if the "string" is the
+* same forward as it is backwards (reversed)
+* should return false if it is not
+* should return "Please enter a "String"" if its not a string
+* ie. False, null, infinity, numbers, arrays.
+* */
+
+function isPalindrome(input) {
+    input = input.toLowerCase();
+    let reversed = input.split("").reverse().join("");
+    return input === reversed
+}
+
+
+// console.log(isPalindrome(false));
+// console.log(isPalindrome(true));
+// console.log(isPalindrome(42));
+// console.log(isPalindrome(""));
+console.log(isPalindrome("Amanda"))
+console.log(isPalindrome("Hello"));
+console.log(isPalindrome("Civic"));
+console.log(isPalindrome("kayak"));
+console.log(isPalindrome("reviver"));
+console.log(isPalindrome("Zelda"));
+console.log(isPalindrome("A nut for a jar of tuna"));
+
+/*
+* Write a function that will know if a String is more than one word
+*
+*
+*
+*
+* */
+
+function moreThanOneWord(input) {
+    return (input.includes(" "));
+}
+
+
+let shoes = [
+    [0, 21],
+    [1, 23],
+    [1, 21],
+    [0, 23]
+
+];
+
+
+function pairOfShoes(shoes) {
+    let firstShoeHasMatch = false;
+    let secondShoeHasMatch = false;
+    for (let i = 1; i < shoes.length; i++) {
+        if (shoes[i][1] === shoes[0][1]) {
+            if (shoes[i][0] !== shoes[0][0]){
+                firstShoeHasMatch = true;
+            }
+        }
+    }
+    return firstShoeHasMatch;
+}
