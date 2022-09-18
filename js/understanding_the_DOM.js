@@ -34,3 +34,5 @@ const games = [
     {Name: "Slay the Spire", Genre: "Card & Board"},
     {Name: "Gwent", Genre: "Card & Board"},
 ];
+
+
