@@ -36,3 +36,43 @@ const games = [
 ];
 
 
+//Display the games list onto the page
+
+function gamesList(game) {
+    let html = '<div class="newGame">';
+    html += '<h2>' + game.Name + '</h2>';
+    html += '<p>' + game.Genre + '</p>';
+    html += '</div>';
+
+    return html;
+    // console.log(html);
+
+}
+
+/*Shows the List in ascending order:
+* This is also what makes the list actually display to the page
+*
+* */
+function showGamesList(games) {
+    let html = "";
+    for (let i = 0; i < games.length; i++) {
+        html += gamesList(games[i]);
+    }
+    return html;
+}
+
+
+/*Now we need to filter our list whenever we select from the drop down form*/
+
+//Now we have to select the div we want the games list to appear in
+
+let showMeTheGames = document.querySelector("#games");
+
+/*Now that we have selected the div, we need to tell it to run the function to then display it onto our page with innerHTML*/
+
+showMeTheGames.innerHTML = showGamesList(games)
+
+let genreValue = document.querySelector("#gamesByGenre").value
+
+//Now we have to run through our array of object so we know what data needs to be displayed
+

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Understanding The DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/games_favicon.ico">
     <link rel="stylesheet" href="css/understanding_the_DOM.css">
 </head>
@@ -43,6 +44,7 @@
         <form>
             <label for="gamesByGenre">Genre</label>
             <select id="gamesByGenre" name="gamesByGenre">
+                <option value="all">All</option>
                 <option value="rpg">RPG</option>
                 <option value="strategy">Strategy</option>
                 <option value="fps">First Person Shooters</option>
@@ -53,7 +55,25 @@
             </select>
         </form>
     </div>
+    <!--Below is where the games list will populate-->
     <div id="games" class="gameList"></div>
+    <br>
+    <br>
+    <br>
+    <hr class="page-break">
+    <br>
+    <br>
+
+    <div class="movies">
+        <h1 id="main-heading">Favorite Movie Franchise</h1>
+        <ul>
+            <li class="list-item">The Cornetto Trilogy</li>
+            <li class="list-item">Star Wars</li>
+            <li class="list-item">Harry Potter</li>
+            <li class="list-item">Lord of the Rings</li>
+            <li class="list-item">Marvel</li>
+        </ul>
+    </div>
 <script src="js/understanding_the_DOM.js"></script>
 </body>
 </html>
