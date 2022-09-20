@@ -64,6 +64,36 @@ function showGamesList(games) {
 
 /*Now we need to filter our list whenever we select from the drop down form*/
 
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     // let selectedRoast = roastSelection.value;
+//     let filteredCoffees = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffee.roast === selectedRoast) {
+//             filteredCoffees.push(coffee);
+//         } else if (selectedRoast === "all") {
+//             filteredCoffees.push(coffee);
+//         }
+//     });
+//     showMeTheCoffee.innerHTML = renderCoffees(filteredCoffees);
+// }
+
+
+function filterGames(e) {
+    e.preventDefault();
+    let selectedGenre = genreList.value
+    let filteredGames = [];
+    games.forEach(function(games){
+        if(games.Genre.toLowerCase() === selectedGenre.toLowerCase()){
+            filteredGames.push(games);
+        } else if (selectedGenre === "All") {
+            filteredGames.push(games);
+        }
+    })
+    showMeTheGames.innerHTML = showGamesList(filteredGames);
+}
+
+
 //Now we have to select the div we want the games list to appear in
 
 let showMeTheGames = document.querySelector("#games");
@@ -72,7 +102,44 @@ let showMeTheGames = document.querySelector("#games");
 
 showMeTheGames.innerHTML = showGamesList(games)
 
-let genreValue = document.querySelector("#gamesByGenre").value
+
+/*Now we want to make the dropdown list work when different options are selected*/
+
+let genreList = document.getElementById("gamesByGenre");
+console.log(genreList);
+
+genreList.addEventListener("change", filterGames);
 
 //Now we have to run through our array of object so we know what data needs to be displayed
 
+
+
+/*DOM Manipulation with the Movie Chart*/
+
+//Grabbing the id of Main Heading off the h1 element
+let title = document.getElementById("main-heading");
+title.style.color = "whitesmoke";
+console.log(title);
+
+//Get Element by class name: Returns an array like element of all the children of the class name
+
+let listItem = document.getElementsByClassName("list-item");
+console.log(listItem);
+
+//Get Elements by Tag name
+
+let unorderedList = document.querySelector("ul");
+//This will create a new list item in the Unordered List
+let createNewListItem = document.createElement("li");
+//This will add the new list item after the last list item
+unorderedList.appendChild(createNewListItem);
+//Modifying the Text of the new list item
+createNewListItem.innerText = "Avatar";
+console.log(unorderedList);
+
+
+//querySelector
+
+let myFranchiseList = document.querySelector(".movies");
+myFranchiseList.style.color = "red"
+console.log(myFranchiseList);
