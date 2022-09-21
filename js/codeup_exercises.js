@@ -154,7 +154,24 @@ minMax(someNumbers).forEach(number => {
 //  * >> filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
 //  *
 
+let arrayWithStringsAndNumbers = [1, 2, "a", "b"];
+let arrayWithStringsAndNumbers2 = [1, "a", "b", 0, 15];
+    let arrayWithStringsAndNumbers3 = [1, 2, "aasf", "1", "123", 123];
 
+    function filterArray(stringsAndNumbersArray) {
+    let allNumbers = [];
+    for (let i = 0; i < stringsAndNumbersArray.length; i++) {
+        if (typeof stringsAndNumbersArray[i] === "number") {
+            allNumbers.push(stringsAndNumbersArray[i])
+
+        }
+    }
+    return allNumbers;
+}
+
+console.log(filterArray(arrayWithStringsAndNumbers));
+    console.log(filterArray(arrayWithStringsAndNumbers2));
+    console.log(filterArray(arrayWithStringsAndNumbers3));
 
 //  * Notes
 //  * Zero is a non-negative integer.
