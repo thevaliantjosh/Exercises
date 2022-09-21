@@ -122,6 +122,26 @@ console.log(`Using a .reduce result: ${totalPets(peopleAndPets)}`);
 //  * All test arrays will have at least one element and are valid.
 //  */
 //
+
+let someNumbers = [1, 5, 10, 40];
+// console.log(Math.min(...someNumbers));
+
+function minMax(arrayOfNumbers) {
+    let minAndMax = [];
+    minAndMax[0] = Math.min(...arrayOfNumbers);
+    minAndMax[1] = Math.max(...arrayOfNumbers);
+    return minAndMax;
+}
+
+console.log(minMax(someNumbers));
+
+minMax(someNumbers).forEach(number => {
+    console.log(number);
+});
+
+
+
+
 //
 // /**
 //  * Filter out Strings from an Array
@@ -133,6 +153,9 @@ console.log(`Using a .reduce result: ${totalPets(peopleAndPets)}`);
 //  * >> filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
 //  * >> filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
 //  *
+
+
+
 //  * Notes
 //  * Zero is a non-negative integer.
 //  * The given array only has integers and strings.
