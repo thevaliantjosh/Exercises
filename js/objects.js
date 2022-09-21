@@ -31,7 +31,7 @@ function getEmail(object) {
 
 console.log(getEmail(person4));
 
-/*Given an object containing both upvotes and downvotes, return what the vote count should be displayed. This is calculated by subtracting the number of downvotes form upvotes*/
+/*Given an object containing both upvotes and downvotes, return what the vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes*/
 
 // const numberOfVotes = {
 //     upvotes: [24, 31, 33, 12, 38, 4],
@@ -54,4 +54,6 @@ const person = {
     console.log(`Hi! I'm ${this.name[0]}`);
         }
     };
+
+console.log(person);
 
