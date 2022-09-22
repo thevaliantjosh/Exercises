@@ -7,11 +7,14 @@
 2) */
 
 $(function(){
-    $(".addArray")
+//Displaying an Array to the page
+    $.each(listOfArtists, function(index, value) {
+        $("#addArray").append("<li>" + (index +1)+ ": " + value + "</li>")
+    })
 });
 
-
 let listOfArtists = ["Alphonso Mucha", "Chiara Bautista", "Claude Monet", "Sandra Botticelli", "Andy Warhol", "Jill McVarish", "Vincdnt Van Gough", "Paul Klee", "Williams Blake", "Egon Schiele", "Salvador Dali", "Paul Cezanne", "Diego Rivera", "Pablo Picasso"]
+
 
 //Declaring an empty array
 let arrayOfBalloons = [];
@@ -21,6 +24,38 @@ arrayOfBalloons[0] = "yellow balloon";
 arrayOfBalloons[1] = "red balloon";
 arrayOfBalloons[2] = "blue balloon";
 arrayOfBalloons[3] = "pink balloon";
-console.log(arrayOfBalloons);
+// console.log(arrayOfBalloons);
 
 
+console.log(arrayOfBalloons.join(" "));
+
+
+
+
+// var isColdOutside = true;
+//
+// var clothingToWear;
+//
+// if (isColdOutside) {
+//     clothingToWear = 'sweater and a jacket';
+// } else {
+//     clothingToWear = 'shorts and a t-shirt';
+// }
+//
+// console.log(clothingToWear)
+
+// let clothingToWear = isColdOutside  ? "shorts and a t-shirt" : "sweater and a jacket";
+
+// isColdOutside = true ? "sweater and a jackt" : "shorts and a t-shirt";
+//
+// console.log(10 % 3);
+
+
+//
+//     let i = 0;
+//     while (i < 10) {
+//         console.log(i);
+//         i++;
+//     }
+//
+// console.log(i);
