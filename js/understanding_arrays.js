@@ -7,10 +7,10 @@
 2) */
 
 $(function(){
-//Displaying an Array to the page
+//Displaying an Array to the page using jQuery
     $.each(listOfArtists, function(index, value) {
         $("#addArray").append("<li>" + (index +1)+ ": " + value + "</li>")
-    })
+    });
 });
 
 let listOfArtists = ["Alphonso Mucha", "Chiara Bautista", "Claude Monet", "Sandra Botticelli", "Andy Warhol", "Jill McVarish", "Vincdnt Van Gough", "Paul Klee", "Williams Blake", "Egon Schiele", "Salvador Dali", "Paul Cezanne", "Diego Rivera", "Pablo Picasso"]
@@ -30,32 +30,53 @@ arrayOfBalloons[3] = "pink balloon";
 console.log(arrayOfBalloons.join(" "));
 
 
+//using a for loop to loop through the array with Javascript
+//Lets simply count from 0 to 15
 
 
-// var isColdOutside = true;
+//using a while loop do count to 15
+// let i = 0;
 //
-// var clothingToWear;
-//
-// if (isColdOutside) {
-//     clothingToWear = 'sweater and a jacket';
-// } else {
-//     clothingToWear = 'shorts and a t-shirt';
+// while (i <= 15) {
+//     console.log(i);
+//     i++
 // }
-//
-// console.log(clothingToWear)
 
-// let clothingToWear = isColdOutside  ? "shorts and a t-shirt" : "sweater and a jacket";
-
-// isColdOutside = true ? "sweater and a jackt" : "shorts and a t-shirt";
-//
-// console.log(10 % 3);
+//1) You need an initializer for (let i = 0;
+//2) Condition for when the loop should end i < number;
+//3) Last you need an incrementer i++)
 
 
-//
-//     let i = 0;
-//     while (i < 10) {
-//         console.log(i);
-//         i++;
-//     }
-//
-// console.log(i);
+//This function will give you an array up to the point of the argument
+function showMeTheNumbers(number) {
+    let newNumberArray = []
+    for (let i = 0; i <= number; i++) {
+        newNumberArray.push(i);
+    }
+    return newNumberArray;
+}
+// console.log(showMeTheNumbers(15));
+
+
+/*This will take the array given in showMeTheNumbers function and
+* return the numbers sequentially in an array within an array, and also the total of that array */
+function giveMeTheTotal(number) {
+    let total = 0;
+    let numbersArray = showMeTheNumbers(number);
+    for (let i = 0; i < numbersArray.length; i++){
+        total += numbersArray[i]
+
+        // console.log(total);
+    }
+    return [numbersArray, total];
+}
+console.log(giveMeTheTotal(5));
+
+//Now we will practice finding the index and values of given elements in an array
+
+function whereIsThatArtist(name) {
+    for (let i = 0; i < listOfArtists.length; i++) {
+        console.log(listOfArtists[i]);
+    }
+
+}
