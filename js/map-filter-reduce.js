@@ -96,3 +96,16 @@ const firstNameOnly = characters.map(character => character.name.split(" ")[0])
 
 console.log("Getting an array with only the first name: ");
 console.log(firstNameOnly);
+
+
+/*=======================USING REDUCE============================= */
+
+//Calculate the total mass for all characters
+
+const massOfAllCharacters = characters.reduce((total, character) => {
+    console.log(total);
+    return total + character.mass;
+}, 0);
+
+console.log(massOfAllCharacters);
+

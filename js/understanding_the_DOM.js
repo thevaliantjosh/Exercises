@@ -143,3 +143,5 @@ console.log(unorderedList);
 let myFranchiseList = document.querySelector(".movies");
 myFranchiseList.style.color = "red"
 console.log(myFranchiseList);
+
+// myFranchiseList.setAttribute("id", "main-heading")
