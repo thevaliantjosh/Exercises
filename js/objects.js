@@ -1,35 +1,39 @@
 "use strict"
 console.log("Welcome to Objects Practice!");
 
-const person1 = {
+const gameOfThronesCharacters = [
+    {
     firstName: "Joffrey",
     lastName: "Baratheon",
     email: "joff@widowswail.com"
-}
+},
 
-const person2 = {
+{
     firstName: "Jon",
     lastName: "Snow",
     email: "brooding@thewall.com"
-}
+},
 
-const person3 = {
+{
     firstName: "Tyrion",
     lastName: "Lannister",
     email: "tyrion@pourmeanother.com"
-}
+},
 
-const person4 = {
+{
     firstName: "Daenerys",
     lastName: "Targaryen",
     email: "dragonlady@gmail.com"
 }
 
+]
+
 function getEmail(object) {
     return object.email;
 }
 
-console.log(getEmail(person4));
+
+// console.log(getEmail(gameOfThronesCharacters.email));
 
 /*Given an object containing both upvotes and downvotes, return what the vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes*/
 
@@ -44,26 +48,69 @@ console.log(getEmail(person4));
 //
 // getVoteCount(numberOfVotes);
 
-const person = {
-    name: ["Bob", "Smith"],
-    age: 32,
-    bio: function () {
-        console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
-        },
-    introduceSelf: function() {
-    console.log(`Hi! I'm ${this.name[0]}`);
-        }
-    };
+//Using the Object.keys method
 
-console.log(person.introduceSelf());
+let keys = Object.keys(gameOfThronesCharacters);
 
-console.log(`${person1.firstName} ${person1.lastName}'s email is: ${person1.email}`)
+console.log(keys);//list the amount of objects in the array by index
 
-console.log(`${person2.firstName} ${person2.lastName}'s email is: ${person2.email}`)
+//Adding an object to the first position using Array.unshift
 
-console.log(`${person3.firstName} ${person3.lastName}'s email is: ${person3.email}`)
+let theMountain = {
+    firstName: "Gregor",
+    lastName: "Clegane",
+    email: "gregorTheMountainClegane@houselannister.com",
+    strength: 100
+}
 
-console.log(`${person4.firstName} ${person4.lastName}'s email is: ${person4.email}`)
+gameOfThronesCharacters.unshift(theMountain);
+
+// console.log(gameOfThronesCharacters);
+
+//Adding an object to the last position in an array
+
+let brienneOfTarth = {
+    firstName: "Brienne",
+    lastName: "Tarth",
+    email: "BrienneOfTarth@evenfallhall.com",
+    strength: 80
+}
+
+gameOfThronesCharacters.push(brienneOfTarth);
+
+console.log(gameOfThronesCharacters);
+
+let tyrion = gameOfThronesCharacters.splice(3, 1)
+
+
+console.log(tyrion);
+
+gameOfThronesCharacters.splice(1, 0, tyrion);
+
+console.log(gameOfThronesCharacters);
+
+
+
+// const person = {
+//     name: ["Bob", "Smith"],
+//     age: 32,
+//     bio: function () {
+//         console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+//         },
+//     introduceSelf: function() {
+//     console.log(`Hi! I'm ${this.name[0]}`);
+//         }
+//     };
+
+// console.log(person.introduceSelf());
+
+// console.log(`${person1.firstName} ${person1.lastName}'s email is: ${person1.email}`)
+//
+// console.log(`${person2.firstName} ${person2.lastName}'s email is: ${person2.email}`)
+//
+// console.log(`${person3.firstName} ${person3.lastName}'s email is: ${person3.email}`)
+//
+// console.log(`${person4.firstName} ${person4.lastName}'s email is: ${person4.email}`)
 
 
 
@@ -94,3 +141,25 @@ function checkAge(age) {
 
 console.log(checkAge(18));
 console.log(checkAge(21));
+
+
+//Write a JavaScript progam that will list the properties of an Object
+const students = {
+    name: "David Rayy",
+    sclass: "VI",
+    rollno: 12
+}
+
+function findProperties(object){
+    return {
+        name: object.name,
+        sclass: object.sclass,
+        rollno: object.rollno
+    }
+}
+
+console.log(findProperties(students));
+//Deleting a property form the students object.
+delete students.rollno;
+
+console.log(findProperties(students));
