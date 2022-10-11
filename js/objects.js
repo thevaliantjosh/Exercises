@@ -55,5 +55,42 @@ const person = {
         }
     };
 
-console.log(person);
+console.log(person.introduceSelf());
 
+console.log(`${person1.firstName} ${person1.lastName}'s email is: ${person1.email}`)
+
+console.log(`${person2.firstName} ${person2.lastName}'s email is: ${person2.email}`)
+
+console.log(`${person3.firstName} ${person3.lastName}'s email is: ${person3.email}`)
+
+console.log(`${person4.firstName} ${person4.lastName}'s email is: ${person4.email}`)
+
+
+
+/*Variables with the const and let keyword are block-scoped. A block is anything between curly brackets ({}). In this case, the curly brackets of the if/else statements. You cannot reference a variable outside of hte block it's declared in, a Reference Erro gets thrown.*/
+
+// function checkAge(age) {
+//     if (age < 18 ) {
+//         const message = "Sorry, you're too young.";
+//     } else {
+//         const message = "Yay! You're old enough!";
+//     }
+//     return message;
+// }
+//
+// console.log(checkAge(21));//This results in a ReferenceError
+
+function checkAge(age) {
+    const tooYoung = "Sorry, you're too young";
+    const drinkingAge = "Your old enough to drink!"
+    if (age < 21 ) {
+        return tooYoung;
+    } else {
+        return drinkingAge;
+    }
+}
+
+
+
+console.log(checkAge(18));
+console.log(checkAge(21));
