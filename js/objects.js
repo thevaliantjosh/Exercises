@@ -163,3 +163,33 @@ console.log(findProperties(students));
 delete students.rollno;
 
 console.log(findProperties(students));
+
+if (true){
+    let x = 5;
+}
+
+console.log(typeof x);
+
+// let name = "Joshua";
+
+const sayHello = (name) => `Hello, ${name}`;
+
+console.log(sayHello("Joshua"));
+
+// let numbers = [1, 2, 3, 4, 5];
+// console.log(numbers);
+
+// numbers.map(n => n * 3)//map is a collection of elemets where each element is stored a a key value pair
+
+// const newNumbers = numbers.map(n => n * 3);
+
+// console.log(numbers);
+
+// console.log(newNumbers);
+
+
+const isDivisibleBy3 = n => n % 3 === 0;
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers.filter(isDivisibleBy3));
+console.log(numbers);
